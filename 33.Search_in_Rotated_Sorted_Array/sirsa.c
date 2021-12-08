@@ -2,9 +2,7 @@
 
 int search(int* nums, int numsSize, int target){
     int st = 0, ed = numsSize - 1;
-    // int maxMin, Minmax;
 
-    int fg = 0;
     if (0 == numsSize) return -1;
     if (1 == numsSize) {
         if (nums[0] == target) return 0;
@@ -19,8 +17,7 @@ int search(int* nums, int numsSize, int target){
                 st = middle + 1;
             else
                 ed = middle -1;
-        }
-        else {
+        } else {
             if(target > nums[ed] && nums[ed] > nums[middle])
                 ed = middle -1;
             else
